@@ -1,0 +1,32 @@
+// R-type and I-type ALU instructions
+123450b7  // li   x1, 0x12345678
+67808093  //    (li, 2nd part)
+0f0f1137  // li   x2, 0x0F0F0F0F
+f0f10113  //    (li, 2nd part)
+002081b3  // add  x3, x1, x2
+40208233  // sub  x4, x1, x2
+0020f2b3  // and  x5, x1, x2
+0020e333  // or   x6, x1, x2
+0020c3b3  // xor  x7, x1, x2
+fff00513  // li   x10, -1
+00100593  // li   x11, 1
+00b52633  // slt  x12, x10, x11
+00b536b3  // sltu x13, x10, x11
+80000837  // li   x16, 0x80000001
+00180813  //    (li, 2nd part)
+00400893  // li   x17, 4
+01181933  // sll  x18, x16, x17
+011859b3  // srl  x19, x16, x17
+41185a33  // sra  x20, x16, x17
+f6a08a93  // addi  x21, x1, -150
+000aab13  // slti  x22, x21, 0
+005abb93  // sltiu x23, x21, 5
+fff0cc13  // xori  x24, x1, -1
+0f00ec93  // ori   x25, x1, 0xF0
+0f00fd13  // andi  x26, x1, 0xF0
+41f85d93  // srai  x27, x16, 31
+01f85e13  // srli  x28, x16, 31
+00389e93  // slli  x29, x17, 3
+7ff00f13  // addi  x30, x0, 2047
+7fff0f93  // addi  x31, x30, 2047
+00100073  // ebreak

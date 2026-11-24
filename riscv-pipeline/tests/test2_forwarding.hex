@@ -1,0 +1,18 @@
+// back-to-back dependent instructions (forwarding from MEM and WB)
+00100093  // addi x1, x0, 1
+00108133  // add  x2, x1, x1
+001101b3  // add  x3, x2, x1
+00218233  // add  x4, x3, x2
+003202b3  // add  x5, x4, x3
+00428333  // add  x6, x5, x4
+401303b3  // sub  x7, x6, x1
+00a00493  // addi x9, x0, 10
+01400493  // addi x9, x0, 20
+00048533  // add  x10, x9, x0
+04d00593  // addi x11, x0, 77
+00000013  // nop
+00000013  // nop
+00058633  // add  x12, x11, x0
+00500013  // addi x0, x0, 5
+000006b3  // add  x13, x0, x0
+00100073  // ebreak

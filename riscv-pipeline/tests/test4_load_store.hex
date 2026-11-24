@@ -1,0 +1,22 @@
+// byte, halfword and word loads/stores
+40000e13  // li   x28, 0x400
+8899b0b7  // li   x1, 0x8899AABB
+abb08093  //    (li, 2nd part)
+001e2023  // sw   x1, 0(x28)
+000e0103  // lb   x2, 0(x28)
+000e4183  // lbu  x3, 0(x28)
+001e0203  // lb   x4, 1(x28)
+003e4283  // lbu  x5, 3(x28)
+000e1303  // lh   x6, 0(x28)
+002e5383  // lhu  x7, 2(x28)
+002e1403  // lh   x8, 2(x28)
+07f00493  // li   x9, 0x7F
+009e02a3  // sb   x9, 5(x28)
+1234b537  // li   x10, 0x1234ABCD
+bcd50513  //    (li, 2nd part)
+00ae1323  // sh   x10, 6(x28)
+00ae0223  // sb   x10, 4(x28)
+004e2583  // lw   x11, 4(x28)
+00ae1423  // sh   x10, 8(x28)
+008e5683  // lhu  x13, 8(x28)
+00100073  // ebreak

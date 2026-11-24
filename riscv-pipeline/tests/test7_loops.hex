@@ -1,0 +1,34 @@
+// sum of 1..10, fibonacci(10), store an array and add it back
+00000093  // li   x1, 0
+00100113  // li   x2, 1
+00b00193  // li   x3, 11
+002080b3  // add  x1, x1, x2
+00110113  // addi x2, x2, 1
+fe314ce3  // blt  x2, x3, loop1
+00000213  // li   x4, 0
+00100293  // li   x5, 1
+00a00313  // li   x6, 10
+005203b3  // add  x7, x4, x5
+00028213  // mv   x4, x5
+00038293  // mv   x5, x7
+fff30313  // addi x6, x6, -1
+fe0318e3  // bnez x6, fib
+40000e13  // li   x28, 0x400
+00000413  // li   x8, 0
+00800493  // li   x9, 8
+00000513  // li   x10, 0
+000e0593  // mv   x11, x28
+00a5a023  // st: sw   x10, 0(x11)
+00350513  // addi x10, x10, 3
+00458593  // addi x11, x11, 4
+00140413  // addi x8, x8, 1
+fe9418e3  // bne  x8, x9, st
+00000613  // li   x12, 0
+000e0593  // mv   x11, x28
+00000413  // li   x8, 0
+0005a683  // ld: lw   x13, 0(x11)
+00d60633  // add  x12, x12, x13
+00458593  // addi x11, x11, 4
+00140413  // addi x8, x8, 1
+fe9418e3  // bne  x8, x9, ld
+00100073  // ebreak

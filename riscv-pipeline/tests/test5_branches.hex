@@ -1,0 +1,29 @@
+// all six branches, taken and not taken. x20 must stay 0 (wrong path is flushed)
+00500093  // li   x1, 5
+ffd00113  // li   x2, -3
+00000a13  // li   x20, 0
+00108663  // beq  x1, x1, L1
+001a0a13  // addi x20, x20, 1
+001a0a13  // addi x20, x20, 1
+04109863  // L1: bne  x1, x1, bad
+00209463  // bne  x1, x2, L2
+001a0a13  // addi x20, x20, 1
+00114463  // L2: blt  x2, x1, L3
+001a0a13  // addi x20, x20, 1
+02116e63  // L3: bltu x2, x1, bad
+0020d463  // bge  x1, x2, L4
+001a0a13  // addi x20, x20, 1
+00117463  // L4: bgeu x2, x1, L5
+001a0a13  // addi x20, x20, 1
+02115463  // L5: bge  x2, x1, bad
+0220c263  // blt  x1, x2, bad
+0020e463  // bltu x1, x2, L6
+001a0a13  // addi x20, x20, 1
+00700193  // L6: addi x3, x0, 7
+00700213  // addi x4, x0, 7
+00418463  // beq  x3, x4, L7
+001a0a13  // addi x20, x20, 1
+00200b13  // L7: addi x22, x0, 2
+0080006f  // j    end
+06300b93  // bad: addi x23, x0, 99
+00100073  // end: ebreak

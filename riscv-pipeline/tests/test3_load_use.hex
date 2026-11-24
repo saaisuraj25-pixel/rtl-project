@@ -1,0 +1,23 @@
+// load followed by an instruction that uses the loaded value (needs a stall)
+40000e13  // li   x28, 0x400
+112230b7  // li   x1, 0x11223344
+34408093  //    (li, 2nd part)
+001e2023  // sw   x1, 0(x28)
+000e2103  // lw   x2, 0(x28)
+002101b3  // add  x3, x2, x2
+000e2203  // lw   x4, 0(x28)
+00120293  // addi x5, x4, 1
+000e2303  // lw   x6, 0(x28)
+006e2223  // sw   x6, 4(x28)
+008e0493  // addi x9, x28, 8
+009e2623  // sw   x9, 12(x28)
+00ce2503  // lw   x10, 12(x28)
+00052583  // lw   x11, 0(x10)
+000e2603  // lw   x12, 0(x28)
+00500693  // addi x13, x0, 5
+00d60733  // add  x14, x12, x13
+000e2783  // lw   x15, 0(x28)
+00178463  // beq  x15, x1, ok
+06300a13  // addi x20, x0, 99
+00100a93  // ok: addi x21, x0, 1
+00100073  // ebreak
