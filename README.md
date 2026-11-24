@@ -14,6 +14,4 @@ References:
 - C. Cummings, *Simulation and Synthesis Techniques for Asynchronous FIFO Design*, SNUG 2002 (FIFO)
 - *The RISC-V Instruction Set Manual, Volume I: Unprivileged ISA*
 
-I used AI assistance (Claude) while writing and debugging this code.
-
 Saai Suraj K S - B.Tech EE, IIT Madras
