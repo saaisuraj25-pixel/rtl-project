@@ -13,5 +13,5 @@ References:
 - D. Harris, S. Harris, *Digital Design and Computer Architecture: RISC-V Edition* (pipeline and hazard unit)
 - C. Cummings, *Simulation and Synthesis Techniques for Asynchronous FIFO Design*, SNUG 2002 (FIFO)
 - *The RISC-V Instruction Set Manual, Volume I: Unprivileged ISA*
-
+AI tools (Claude) were used for debugging help and documentation drafts. Design and RTL were written by me
 Saai Suraj K S - B.Tech EE, IIT Madras
